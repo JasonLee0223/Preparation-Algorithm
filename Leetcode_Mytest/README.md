@@ -36,7 +36,7 @@ Given a signed 32-bit integer x, return x with its digits reversed. If reversing
  Assume the environment does not allow you to store 64-bit integers (signed or unsigned).   
  **환경에서 64비트 정수(부호가 있거나 없는)를 저장할 수 없다고 가정합니다.**
 
- ### 💻 
+ ### 💻 풀이내용
  1. 입력된 정수```x```를 뒤집어 출력한다.
  2. 입력된 정수의 끝자리가 '0'인 경우 표시되지않는다.
  3. 부호값을 따로 두어 음수를 표현할 수 있도록한다.
@@ -63,3 +63,25 @@ if (result > Int32.max || result < Int32.min) {
     result = 0
 }
 ```
+***
+## 📋 83. Remove Duplicates from Sorted List
+### 📜 문제내용
+Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.   
+정렬된 연결 목록의 Head가 주어지면 각 요소가 한 번만 나타나도록 모든 중복 항목을 삭제합니다. 정렬된 연결 목록도 반환합니다.   
+
+```swift
+// Example1
+Input: head = [1,1,2]
+Output: [1,2]
+// Example2
+Input: head = [1,1,2,3,3]
+Output: [1,2,3]
+```
+### 💻 풀이내용
+1. 입력되는 head의 값이 nil일 때 nil을 반환하는 조건문 선언한다.
+2. 입력된 head값을 node 변수에 저장하여 반복문을 사용할 수 있게한다.
+3. node?.next가 nil이 아닐 때까지 반복문을 돈다.
+   1. 현재node의 val != 다음node의 val이 같은 경우
+   2. 현재node를 다음 node의 포인터로 지정
+   3. node를 다음 node로 치환
+4. 반복이 끝난 후 전체 linkedlist인 head 반환

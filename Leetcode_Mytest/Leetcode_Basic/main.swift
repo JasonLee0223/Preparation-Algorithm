@@ -7,31 +7,29 @@
 
 import Foundation
 
-let inputValue = Int(readLine()!)!
-
-func reverse(_ x: Int) -> Int {
-    var input = x
-    var negative = 1
-    var result = 0
+public class ListNode {
+    public var val: Int
+    public var next: ListNode?
+    //public init() { self.val = 0; self.next = nil; }
+    //public init(_ val: Int) { self.val = val; self.next = nil; }
     
-    if input < 0 {
-        input = input * -1
-        negative = -1
+    public init(_ val: Int, _ next: ListNode? = nil) {
+        self.val = val
+        self.next = next
     }
-    
-                                        // ex. input = 123
-    while input > 0 {                   // input값이 '0'되면 탈출
-        var value = input % 10          // 1의 자릿수까지 구하기 ex.123 -> 3 / 12 -> 2
-        input = input / 10              // 10의 자릿수로 나눠지는 몫값 구하기 ex. 12 -> 1
-        result = result * 10 + value    // 결과값 만들기 3 -> 32 ->321
-        //print("===\(result)")
-    }
-    
-    result = result * negative
-    if (result > Int32.max || result < Int32.min) {
-        result = 0
-    }
-    
-    return result
 }
-print(reverse(inputValue))
+ 
+func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+    if head?.val == nil { return nil }
+
+    var node = head                         // 첫 node를 head만 가져옴
+
+    while node?.next != nil {               // 다음 node가 없을 때까지 반복
+        if node?.val == node?.next?.val {   // 현재node의 val != 다음node의 val이 같은 경우
+            node?.next = node?.next?.next   // 현재node를 다음 node의 포인터로 지정
+        } else {
+        node = node?.next                   // node를 다음 node로 치환
+        }
+    }
+    return head                             // node는 하나의 node일 뿐 연결리스트 전체가 아니여서 head 반환
+}

@@ -62,7 +62,10 @@ The secondary diagonal is:
 ```
 Sum across the secondary diagonal: 4 + 5 + 10 = 19   
 Difference: |4 - 19| = 15
-**Note**: |x| is the absolute value of x
+**Note**: |x| is the absolute value of x   
+
+### 📝 문제풀이
+![알고리즘 연습장-4](https://user-images.githubusercontent.com/92699723/151105217-354bbcd8-fe5d-401d-ab0a-e00fc19c7ef9.jpg){: width="50" height="50"}
 
 ### 🧑🏼‍💻 코드 작성
 ```Swift
@@ -80,15 +83,31 @@ func diagonalDifference(arr: [[Int]]) -> Int {
 }
 ```
 ***
-## 📋 모의고사
+## 📋 Time Conversion
 ### 📜 문제내용   
-수포자는 수학을 포기한 사람의 준말입니다. 수포자 삼인방은 모의고사에 수학 문제를 전부 찍으려 합니다.   
-수포자는 1번 문제부터 마지막 문제까지 다음과 같이 찍습니다.
-1번 수포자가 찍는 방식: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, ...   
-2번 수포자가 찍는 방식: 2, 1, 2, 3, 2, 4, 2, 5, 2, 1, 2, 3, 2, 4, 2, 5, ...   
-3번 수포자가 찍는 방식: 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, 3, 3, 1, 1, 2, 2, 4, 4, 5, 5, ...   
-1번 문제부터 마지막 문제까지의 정답이 순서대로 들은 배열 answers가 주어졌을 때,   
-가장 많은 문제를 맞힌 사람이 누구인지 배열에 담아 return 하도록 solution 함수를 작성해주세요.
+Given a time in -hour AM/PM format, convert it to military (24-hour) time.   
+Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.   
+- 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.   
+Example
+- s = '12:01:00PM"   
+  return '12:01:00'.
+Return '12:01:00'.
+
+Return '00:01:00'.
+Function Description
+Complete the timeConversion function in the editor below. It should return a new string representing the input time in 24 hour format.
+timeConversion has the following parameter(s):
+string s: a time in  hour format
+Returns
+string: the time in  hour format
+Input Format
+A single string  that represents a time in -hour clock format (i.e.:  or ).
+Constraints
+All input times are valid
+Sample Input 0
+07:05:45PM
+Sample Output 0
+19:05:45
 
 ### 📝 문제풀이
 1번 수포자는 1, 2, 3, 4, 5 를 주기로 찍는다.   

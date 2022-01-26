@@ -2,7 +2,8 @@
 
 ## 📋 Diagonal Difference
 ### 📜 문제내용   
-Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+Given a square matrix, calculate the absolute difference between the sums of its diagonals.   
+(정사각 행렬이 주어지면 대각선의 합 사이의 절대 차이를 계산합니다.)   
 For example, the square matrix  is shown below:
 ```
 1 2 3
@@ -12,14 +13,21 @@ For example, the square matrix  is shown below:
 The left-to-right diagonal = 1 + 5 + 9 + 15. The right to left diagonal = 3 + 5 + 9 = 17.   
 Their absolute difference is |15 - 17| = 2.   
 #### **Function description**
-Complete the ***diagonalDifference*** function in the editor below.
-diagonalDifference takes the following parameter:
+Complete the ***diagonalDifference*** function in the editor below.   
+diagonalDifference takes the following parameter:   
+(대각선 차이는 다음 매개변수를 사용합니다.)   
 - int arr[n][m]: an array of integers   
 #### **Return**
 - int: the absolute diagonal difference
 #### **Input Format**
-The first line contains a single integer, ***n***, the number of rows and columns in the square matrix ***arr***.    
-Each of the next  lines describes a row, ***arr[i]***, and consists of  space-separated integers ***arr[i][j]***.   
+The first line contains a single integer, ***n***,   
+(첫 번째 줄에는 단일 정수가 포함되어 있습니다. )   
+the number of rows and columns in the square matrix ***arr***.   
+(정방 행렬의 행과 열 개수)    
+Each of the next  lines describes a row, ***arr[i]***,   
+(각각의 다음 라인은 행을 설명하고)   
+and consists of ***n*** space-separated integers ***arr[i][j]***.  
+(및 구성 ***n*** 공백으로 구분된 정수 ***arr[i][j]***) 
 
 #### **Constraints**
 - -100 ≤ arr[i][j] ≤ 100

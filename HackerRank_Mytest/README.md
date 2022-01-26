@@ -182,7 +182,8 @@ YES
 ```   
 #### **Explanation 0**
 The two kangaroos jump through the following sequence of locations:
-<img src = "https://user-images.githubusercontent.com/92699723/151115422-80a370e1-8b8d-4c5c-ae29-67002e7b5802.png" width="1000" height="300"/>
+<img width="704" alt="스크린샷 2022-01-26 오후 3 49 21" src="https://user-images.githubusercontent.com/92699723/151116293-7dd60f07-836b-471b-8dce-156cc4607bad.png">   
+
 From the image, it is clear that the kangaroos meet at the same location (number **12** on the number line) after same number of jumps (**4** jumps), and we print **YES**.   
 
 #### **Sample Input 1**

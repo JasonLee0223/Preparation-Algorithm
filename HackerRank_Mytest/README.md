@@ -1,4 +1,8 @@
 # HackerRank Algorithm Problem
+> 반례를 찾는 것도 알고리즘 능력의 일부이기 때문에 보통 백준(BOJ)을 가장 많이 추천한다.   
+> 하지만 우리는 초보니까 친절한 leetcode 같은 사이트로 풀어도 무방.   
+> 입문자일 때는 친절한 플랫폼을 사용하고, 좀 더 능숙하게 하고 싶거나 대회를 하고 싶다면 BOJ를 추천   
+> atcoder나 codeforce 같은 대회 플랫폼에서 가상 대회도 출전해 보자.   
 
 ## 📋 Diagonal Difference
 ### 📜 문제내용   
@@ -65,7 +69,7 @@ Difference: |4 - 19| = 15
 **Note**: |x| is the absolute value of x   
 
 ### 📝 문제풀이
-<img src = "https://user-images.githubusercontent.com/92699723/151105591-b0e0ca5b-aa23-4f3c-9d23-5cdc266b132d.jpg" width="300" height="200"/>
+<img src = "https://user-images.githubusercontent.com/92699723/151105591-b0e0ca5b-aa23-4f3c-9d23-5cdc266b132d.jpg" width="400" height="300"/>
 
 ### 🧑🏼‍💻 코드 작성
 ```Swift
@@ -117,7 +121,7 @@ A single string  that represents a time in **12**-hour clock format (i.e.: **hh:
 ```
 
 ### 📝 문제풀이
-<img src = "https://user-images.githubusercontent.com/92699723/151113426-ac6a7118-8aa5-4aa2-ad74-684be8f82db9.jpg" width="300" height="200"/>   
+<img src = "https://user-images.githubusercontent.com/92699723/151113426-ac6a7118-8aa5-4aa2-ad74-684be8f82db9.jpg" width="400" height="300"/>   
 
 ### 🧑🏼‍💻 코드 작성
 ```Swift
@@ -142,15 +146,64 @@ func timeConversion(s: String) -> String {
 //timeConversion(s: "07:05:45AM")
 ```
 ***
-## 📋 이상한 문자 만들기
+## 📋 Number Line Jumps
 ### 📜 문제내용      
+You are choreographing a circus show with various animals. For one act, you are given two kangaroos on a number line ready to jump in the positive direction (i.e, toward positive infinity).   
+- The first kangaroo starts at location **𝑥1** and moves at a rate of **𝑣1** meters per jump.   
+- The second kangaroo starts at location **𝑥2** and moves at a rate of **𝑣1** meters per jump.   
+You have to figure out a way to get both kangaroos at the same location at the same time as part of the show. If it is possible, return YES, otherwise return NO.   
+
+#### **Example**    
+ **𝑥1** = 2   
+ **𝑣1** = 1   
+ **𝑥2** = 1    
+ **𝑣2** = 2   
+After one jump, they are both at **𝑥** = 3, (**𝑥1** + **𝑣1** = 2 + 1, **𝑥2** + **𝑣2** = 1 + 2 ), so the answer is YES.   
+
+#### **Function Description**
+Complete the function kangaroo in the editor below.   
+kangaroo has the following parameter(s):   
+- int 𝑥1, int 𝑣1: starting position and jump distance for kangaroo 1   
+- int 𝑥2, int 𝑣2: starting position and jump distance for kangaroo 2   
+- 
+#### **Returns**
+- string: either YES or NO   
+- 
+#### **Input Format**
+A single line of four space-separated integers denoting the respective values of **𝑥1**, **𝑣1**, **𝑥2**, and **𝑣2**.   
+
+#### **Sample Input 0**
+```
+0 3 4 2
+```
+#### **Sample Output 0**
+```
+YES
+```   
+#### **Explanation 0**
+The two kangaroos jump through the following sequence of locations:
+<img src = "https://user-images.githubusercontent.com/92699723/151115422-80a370e1-8b8d-4c5c-ae29-67002e7b5802.png" width="1000" height="300"/>
+From the image, it is clear that the kangaroos meet at the same location (number **12** on the number line) after same number of jumps (**4** jumps), and we print **YES**.   
+
+#### **Sample Input 1**
+```
+0 2 5 3
+```
+#### **Sample Output 1**
+```
+NO
+```
+
+#### **Explanation 1**
+
+The second kangaroo has a starting location that is ahead (further to the right) of the first kangaroo's starting location (i.e.**𝑥2**, **𝑥1**). Because the second kangaroo moves at a faster rate (meaning **𝑣2** > **𝑣1**) and is already ahead of the first kangaroo, the first kangaroo will never be able to catch up. Thus, we print NO.
 
 ### 📝 문제풀이
 
 ### 🧑🏼‍💻 코드 작성
 
 ***
-## 📋 K번째 수
+## 📋 Save the Prisoner!
 ### 📜 문제내용   
 
 ### 📝 문제풀이

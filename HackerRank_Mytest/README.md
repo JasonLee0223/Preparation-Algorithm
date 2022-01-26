@@ -85,77 +85,65 @@ func diagonalDifference(arr: [[Int]]) -> Int {
 ***
 ## 📋 Time Conversion
 ### 📜 문제내용   
-Given a time in -hour AM/PM format, convert it to military (24-hour) time.   
+Given a time in **12**-hour AM/PM format, convert it to military (24-hour) time.   
+주어진 시간 **12**-시간 AM/PM 형식 , 군사(24시간제) 시간으로 변환합니다.   
 Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.   
 - 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.   
 Example
-- s = '12:01:00PM"   
-  return '12:01:00'.
-Return '12:01:00'.
+- s = **'12:01:00PM"**   
+  Return '12:01:00'.   
+- s = **'12:01:00AM'**   
+  Return '00:01:00'.   
 
-Return '00:01:00'.
-Function Description
-Complete the timeConversion function in the editor below. It should return a new string representing the input time in 24 hour format.
-timeConversion has the following parameter(s):
-string s: a time in  hour format
-Returns
-string: the time in  hour format
-Input Format
-A single string  that represents a time in -hour clock format (i.e.:  or ).
-Constraints
-All input times are valid
-Sample Input 0
+#### **Function Description**
+Complete the timeConversion function in the editor below.   
+It should return a new string representing the input time in 24 hour format.   
+(입력 시간을 나타내는 새 문자열을 24시간 형식으로 반환해야 합니다.)   
+timeConversion has the following parameter(s):   
+- string s: a time in **12** hour format   
+#### **Returns**
+- string: the time in **24** hour format
+#### Input Format
+A single string  that represents a time in **12**-hour clock format (i.e.: **hh:mm:ssAM** or **hh:mm:ssPM**).   
+#### **Constraints**
+- All input times are valid
+#### **Sample Input 0**
+```
 07:05:45PM
-Sample Output 0
+```
+#### **Sample Output 0**
+```
 19:05:45
+```
 
 ### 📝 문제풀이
-1번 수포자는 1, 2, 3, 4, 5 를 주기로 찍는다.   
-2번 수포자는 2, 1, 2, 3, 2, 4, 2, 5 를 주기로 찍는다.   
-3번 수포자는 3, 3, 1, 1, 2, 2, 4, 4, 5, 5 를 주기로 찍는다.   
-문제 수만큼 반복하면서 정답 배열의 요소와 비교하여 가장 많이 문제를 맞춘 사람이 누구인지 배열에 담아 return한다.   
-
-1) 위 3명의 수포자를 각각 배열로 선언한다.
-2) 답안지 배열 요소만큼 반복하면된다.
-3) 가장 많이 문제를 맞춘 수포자를 넣기위한 배열 생성 및 오름차순으로 정렬
-4) 첫번째 답을 기준으로 주어진 수포자 배열의 값을 한바퀴씩 다 돌아야한다.
+<img src = "https://user-images.githubusercontent.com/92699723/151113426-ac6a7118-8aa5-4aa2-ad74-684be8f82db9.jpg" width="300" height="200"/>   
 
 ### 🧑🏼‍💻 코드 작성
-```swift
-func solution(_ answers:[Int]) -> [Int] {
-    var collectionStudent = [Int]()
-    var score = [0, 0, 0]
+```Swift
+func timeConversion(s: String) -> String {
+    // Write your code here
+    guard let hh = Int(s.prefix(2)) else {
+        fatalError("Wrong Time Sentence")
+    }
+    var onlyTime = String(s.dropLast(2))
     
-    // 1) 위 3명의 수포자를 각각 배열로 선언한다.
-    let looser1 = [1, 2, 3, 4, 5]
-    let looser2 = [2, 1, 2, 3, 2, 4, 2, 5]
-    let looser3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
-    
-    // 2) 답안지 배열 요소만큼 반복하면된다.
-    for i in 0..<answers.count {
-        // 첫번째 답을 기준으로 주어진 수포자 배열의 값을 한바퀴씩 다 돌아야한다.
-        if answers[i] == looser1[i%5] { score[0] += 1 }
-        if answers[i] == looser2[i%8] { score[1] += 1 }
-        if answers[i] == looser3[i%10] { score[2] += 1 }
+    if s.hasSuffix("PM"), hh < 12 {
+        onlyTime = String(onlyTime.dropFirst(2))
+        onlyTime = "\(hh+12)\(onlyTime)"
+    } else if s.hasSuffix("AM"), hh == 12 {
+        onlyTime = String(onlyTime.dropFirst(2))
+        onlyTime = "00\(onlyTime)"
     }
     
-    for i in 0...2 {
-        if score.max() == score[i] {
-            collectionStudent.append(i+1)
-        }
-    }
-    
-    return collectionStudent.sorted()
+    //print(onlyTime)
+    return onlyTime
 }
-print(solution([1,2,3,4,5]))
-print(solution([1,3,2,4,2]))
+//timeConversion(s: "07:05:45AM")
 ```
 ***
 ## 📋 이상한 문자 만들기
-### 📜 문제내용   
-문자열 s는 한 개 이상의 단어로 구성되어 있습니다.   
-각 단어는 하나 이상의 공백문자로 구분되어 있습니다.   
-각 단어의 짝수번째 알파벳은 대문자로, 홀수번째 알파벳은 소문자로 바꾼 문자열을 리턴하는 함수, solution을 완성하세요.   
+### 📜 문제내용      
 
 ### 📝 문제풀이
 
@@ -164,15 +152,6 @@ print(solution([1,3,2,4,2]))
 ***
 ## 📋 K번째 수
 ### 📜 문제내용   
-배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.   
-예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면
-array의 2번째부터 5번째까지 자르면 [5, 2, 6, 3]입니다.   
-1에서 나온 배열을 정렬하면 [2, 3, 5, 6]입니다.   
-2에서 나온 배열의 3번째 숫자는 5입니다.   
-배열 array, [i, j, k]를 원소로 가진 2차원 배열 commands가 매개변수로 주어질 때,   
-commands의 모든 원소에 대해 앞서 설명한 연산을 적용했을 때 나온 결과를 배열에 담아 return 하도록 solution 함수를 작성해주세요.   
-
-<img width="532" alt="스크린샷 2022-01-19 오후 5 03 22" src="https://user-images.githubusercontent.com/92699723/150088954-40061ad6-30f2-46b8-8fb6-2592314e8605.png">
 
 ### 📝 문제풀이
 

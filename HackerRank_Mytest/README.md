@@ -150,8 +150,12 @@ func timeConversion(s: String) -> String {
 ### 📜 문제내용      
 You are choreographing a circus show with various animals. For one act, you are given two kangaroos on a number line ready to jump in the positive direction (i.e, toward positive infinity).   
 - The first kangaroo starts at location **𝑥1** and moves at a rate of **𝑣1** meters per jump.   
+(첫 번째 캥거루는 위치에서 시작합니다. **𝑥1**의 속도로 움직입니다. **𝑣1** 점프 당 미터.)   
 - The second kangaroo starts at location **𝑥2** and moves at a rate of **𝑣1** meters per jump.   
-You have to figure out a way to get both kangaroos at the same location at the same time as part of the show. If it is possible, return YES, otherwise return NO.   
+(두 번째 캥거루는 다음 위치에서 시작합니다.**𝑥2**의 속도로 움직입니다. **𝑣2** 점프 당 미터.)   
+You have to figure out a way to get both kangaroos at the same location at the same time as part of the show.    
+(쇼의 일부로 같은 위치에서 두 캥거루를 동시에 얻을 수 있는 방법을 찾아야 합니다.)   
+If it is possible, return YES, otherwise return NO.   
 
 #### **Example**    
  **𝑥1** = 2   
@@ -165,10 +169,8 @@ Complete the function kangaroo in the editor below.
 kangaroo has the following parameter(s):   
 - int 𝑥1, int 𝑣1: starting position and jump distance for kangaroo 1   
 - int 𝑥2, int 𝑣2: starting position and jump distance for kangaroo 2   
-- 
 #### **Returns**
 - string: either YES or NO   
-- 
 #### **Input Format**
 A single line of four space-separated integers denoting the respective values of **𝑥1**, **𝑣1**, **𝑥2**, and **𝑣2**.   
 
@@ -200,8 +202,24 @@ NO
 The second kangaroo has a starting location that is ahead (further to the right) of the first kangaroo's starting location (i.e.**𝑥2**, **𝑥1**). Because the second kangaroo moves at a faster rate (meaning **𝑣2** > **𝑣1**) and is already ahead of the first kangaroo, the first kangaroo will never be able to catch up. Thus, we print NO.
 
 ### 📝 문제풀이
+<img src = "https://user-images.githubusercontent.com/92699723/151124097-ec4bfedb-fa6e-470d-8bdf-34d4021eb14d.jpg" width="600" height="600"/>   
 
 ### 🧑🏼‍💻 코드 작성
+```Swift
+func kangaroo(x1: Int, v1: Int, x2: Int, v2: Int) -> String {
+    // Write your code here
+    var realX1 = x1
+    var realX2 = x2
+    
+    while true {
+        if v1 <= v2 { return "NO"}
+        realX1 = x1 + v1
+        realX2 = x2 + v2
+        if realX1 == realX2 { return "NO" }
+        if realX1 > realX2 { return "YES" }
+    }
+}
+```
 
 ***
 ## 📋 Save the Prisoner!

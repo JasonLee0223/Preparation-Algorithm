@@ -10,6 +10,7 @@
 		5B0390FD27A0D77C008CAB7F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0390FC27A0D77C008CAB7F /* main.swift */; };
 		5B03910427A0FA51008CAB7F /* diaonal Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03910327A0FA51008CAB7F /* diaonal Difference.swift */; };
 		5B03910627A11F29008CAB7F /* Time-Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03910527A11F29008CAB7F /* Time-Conversion.swift */; };
+		5B03910827A13598008CAB7F /* Number Line Jumps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03910727A13598008CAB7F /* Number Line Jumps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		5B0390FC27A0D77C008CAB7F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		5B03910327A0FA51008CAB7F /* diaonal Difference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "diaonal Difference.swift"; sourceTree = "<group>"; };
 		5B03910527A11F29008CAB7F /* Time-Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Time-Conversion.swift"; sourceTree = "<group>"; };
+		5B03910727A13598008CAB7F /* Number Line Jumps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number Line Jumps.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5B0390FC27A0D77C008CAB7F /* main.swift */,
 				5B03910327A0FA51008CAB7F /* diaonal Difference.swift */,
 				5B03910527A11F29008CAB7F /* Time-Conversion.swift */,
+				5B03910727A13598008CAB7F /* Number Line Jumps.swift */,
 			);
 			path = HackerRank_Basic;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			files = (
 				5B03910427A0FA51008CAB7F /* diaonal Difference.swift in Sources */,
 				5B0390FD27A0D77C008CAB7F /* main.swift in Sources */,
+				5B03910827A13598008CAB7F /* Number Line Jumps.swift in Sources */,
 				5B03910627A11F29008CAB7F /* Time-Conversion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

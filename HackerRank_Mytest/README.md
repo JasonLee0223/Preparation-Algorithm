@@ -65,7 +65,7 @@ Difference: |4 - 19| = 15
 **Note**: |x| is the absolute value of x   
 
 ### 📝 문제풀이
-![알고리즘 연습장-4](https://user-images.githubusercontent.com/92699723/151105217-354bbcd8-fe5d-401d-ab0a-e00fc19c7ef9.jpg){: width="50" height="50"}
+<img src = "https://user-images.githubusercontent.com/92699723/151105591-b0e0ca5b-aa23-4f3c-9d23-5cdc266b132d.jpg" width="300" height="200"/>
 
 ### 🧑🏼‍💻 코드 작성
 ```Swift

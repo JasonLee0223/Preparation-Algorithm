@@ -13,4 +13,5 @@ import Foundation
 //MARK: CS1 - 알고리즘
 //num1000() // 1 2 -> 3
 //num1009()
-num1076()
+//num1076()
+

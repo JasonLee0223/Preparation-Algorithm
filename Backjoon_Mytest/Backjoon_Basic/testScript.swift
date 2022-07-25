@@ -7,7 +7,7 @@
 
 import Foundation
 
-//MARK: 4673번
+// MARK: 4673번
 func num4673() -> Void {
     // Set 빈 배열을 선언
     var storageSet: Set<Int> = []
@@ -157,4 +157,9 @@ func num1076() {
     }
     result = ( colorValueArr[0]*10 + colorValueArr[1] ) * Int((pow(10.0, Double(colorValueArr[2]))))
     print(result)
+}
+
+//MARK: 1052번
+func num1052() {
+    
 }
